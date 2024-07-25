@@ -1,0 +1,82 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1 rem = 10px */    
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-size: 1.6rem;
+    line-height: 2;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+header, footer{
+    text-align:center;
+    color: white;
+}
+header{
+    font-size: 4rem;
+    background-color: #2F2E2E;
+    padding: 1rem;
+    width: 100%;
+}
+
+.calculadora{
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+    margin-bottom: 4rem;
+    border: 15px solid #2F2E2E;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.resultado {
+    grid-column: 1 / 5;
+    color: white;
+    background-color: #2F2E2E;
+    border-radius: 1rem;
+}
+.boton, .igual, .clear{
+    background-color: #2F2E2E;
+    bottom: auto;
+    color: white;
+    width: 6rem; /* Ancho del botón */
+    height: 6rem; /* Alto del botón */
+    border-radius: 50%; /* Hace el botón circular */
+    border: none; /* Sin borde */
+    display: flex; /* Utiliza Flexbox */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    font-size: 2rem; /* Tamaño de la fuente */
+    transition: background-color 0.3s;
+}
+boton:hover{
+    background-color: #2F2E2E;
+}
+.operaciones{
+    color: greenyellow;
+}
+.igual{
+    grid-column: 1 / 4;
+    border-radius: 3rem;
+    align-items: center;
+    width: 20rem; 
+}
+.clear{
+    grid-column: 1 / 5;
+    grid-row: 6;
+    border-radius: 3rem;
+    align-items: center;
+    width: 20rem; 
+}
